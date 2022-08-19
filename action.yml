@@ -1,0 +1,7 @@
+name: 'Auto sync issue'
+author: jiawei
+description: 'sync issue automatically if contains some label'
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
