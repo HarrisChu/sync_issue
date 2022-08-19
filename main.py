@@ -4,7 +4,7 @@ from tabnanny import check
 from github import Github
 
 gh_url = "https://github.com"
-token = os.environ["GH_PAT"]
+token = os.environ["INPUT_REPO_TOKEN"]
 gh = Github(token)
 common_label=os.environ["COMMON_ISSUE_LABEL"]
 from_repo_name = os.environ["GITHUB_REPOSITORY"]
