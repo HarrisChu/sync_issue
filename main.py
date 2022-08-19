@@ -39,5 +39,6 @@ if __name__ == "__main__":
     issue_num = os.environ["IU_NUM"]
     if issue_num != "":
         issue_num = int(issue_num)
+    print(">>> issue number: {}".format(issue_num))
     main(issue_num,common_label)
     
