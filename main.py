@@ -4,7 +4,7 @@ from tabnanny import check
 from github import Github
 
 gh_url = "https://github.com"
-token = os.environ["INPUT_REPO_TOKEN"]
+token = os.environ["GH_PAT"]
 gh = Github(token)
 common_label=os.environ["COMMON_ISSUE_LABEL"]
 from_repo_name = os.environ["GITHUB_REPOSITORY"]
@@ -36,7 +36,7 @@ def main(issue_num,common_label):
         send_issue_to_repo(issue_num,to_repo_name)
 
 if __name__ == "__main__":
-    issue_num="33"
+    issue_num = os.environ["IU_NUM"]
     if issue_num != "":
         issue_num = int(issue_num)
     main(issue_num,common_label)
